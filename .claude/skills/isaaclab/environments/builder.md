@@ -73,8 +73,8 @@ gym.register(
 
 ## Detailed References
 
-- [templates.md](templates.md) - Full code templates for new environments
-- [mdp-catalog.md](mdp-catalog.md) - Complete catalog of built-in MDP functions
+- [templates.md](templates.md) - Pointers to real examples in the codebase
+- Built-in MDP functions: `source/isaaclab/isaaclab/envs/mdp/`
 
 ## Reference: CartPole as Example
 

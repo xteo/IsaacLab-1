@@ -1,7 +1,7 @@
 ---
 name: isaaclab
 description: |
-  Isaac Lab robotics RL framework. Use for: environment setup/troubleshooting,
+  Isaac Lab robotics learning framework. Use for: environment setup/troubleshooting,
   architecture questions (manager-based vs direct), RL training (SB3/RSL-RL/SKRL/
   RL-Games), building custom environments, or running tutorials like CartPole.
 allowed-tools: Bash, Read, Write, Edit, Glob, Grep

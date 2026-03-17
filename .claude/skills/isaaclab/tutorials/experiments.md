@@ -80,13 +80,7 @@ This uses RGB camera images instead of joint states. Requires more training and 
 
 ## Experiment 6: Direct Environment
 
-> **Known Bug (develop branch)**: `Isaac-Cartpole-Direct-v0` crashes with a warp
-> dtype error (`RuntimeError: Cannot cast dtypes of unequal byte size`) in
-> `write_root_pose_to_sim()`. This affects ALL RL frameworks on the develop branch
-> (Isaac Sim 6.0). Skip this experiment until the bug is fixed, or use the `main`
-> branch where it may work.
-
-Try the monolithic implementation (when working):
+Try the monolithic implementation:
 ```bash
 $PYTHON scripts/reinforcement_learning/sb3/train.py \
   --task Isaac-Cartpole-Direct-v0 --num_envs 64 --headless

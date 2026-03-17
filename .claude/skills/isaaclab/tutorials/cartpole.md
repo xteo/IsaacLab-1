@@ -97,18 +97,10 @@ See [experiments.md](experiments.md) for customization ideas:
 | Task ID | Description | Status |
 |---------|-------------|--------|
 | `Isaac-Cartpole-v0` | Standard (manager-based) | Works (all 4 frameworks verified) |
-| `Isaac-Cartpole-Direct-v0` | Direct implementation | **Broken on develop branch** (see below) |
+| `Isaac-Cartpole-Direct-v0` | Direct implementation | Works |
 | `Isaac-Cartpole-RGB-v0` | With RGB camera observations | Works (RL-Games only) |
 | `Isaac-Cartpole-Depth-v0` | With depth camera observations | Works (RL-Games only) |
 | `Isaac-Cartpole-RGB-ResNet18-v0` | ResNet18 feature extraction | Works (RL-Games only) |
 | `Isaac-Cartpole-RGB-TheiaTiny-v0` | Theia-Tiny Transformer features | Works (RL-Games only) |
-| `Isaac-Cartpole-RGB-Camera-Direct-v0` | Direct + RGB camera | Untested |
-| `Isaac-Cartpole-Depth-Camera-Direct-v0` | Direct + depth camera | Untested |
-
-### Known Bug: Direct CartPole (develop branch)
-
-`Isaac-Cartpole-Direct-v0` crashes with `RuntimeError: Cannot cast dtypes of unequal
-byte size` in `write_root_pose_to_sim()` during `_reset_idx()`. This is a warp dtype
-mismatch bug on the develop branch (Isaac Sim 6.0). It affects ALL RL frameworks.
-Use `Isaac-Cartpole-v0` (manager-based) instead — it is functionally identical and
-works correctly.
+| `Isaac-Cartpole-RGB-Camera-Direct-v0` | Direct + RGB camera | Works |
+| `Isaac-Cartpole-Depth-Camera-Direct-v0` | Direct + depth camera | Works |

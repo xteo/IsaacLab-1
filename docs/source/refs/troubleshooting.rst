@@ -197,6 +197,46 @@ allowing the ``MyClass`` object to be properly garbage collected.
 By following this pattern, you can prevent memory leaks and maintain a more efficient and stable simulation.
 
 
+``ModuleNotFoundError: No module named 'omni'`` or ``'isaacsim'``
+----------------------------------------------------------------------
+
+This error occurs when running Isaac Lab scripts with bare ``python3`` instead of the
+Isaac Lab wrapper. Always use ``./isaaclab.sh -p <script>`` instead of
+``python3 <script>``. The wrapper sets up the correct ``PYTHONPATH`` and
+``LD_LIBRARY_PATH`` for the Isaac Sim runtime.
+
+
+Importing Isaac Lab modules without the simulation runtime
+----------------------------------------------------------
+
+Most Isaac Lab modules require the simulation runtime (Kit / AppLauncher) to be
+initialized before they can be imported. If you need to import Isaac Lab modules in a
+standalone script, call ``AppLauncher`` first:
+
+.. code:: python
+
+    from isaaclab.app import AppLauncher
+    app_launcher = AppLauncher(args_cli)
+    simulation_app = app_launcher.app
+
+    # Deep imports work after this point
+
+Some modules can be imported without the runtime, for example ``isaaclab.app``
+(AppLauncher itself) and ``isaaclab.utils``. Lazy module imports have improved
+the situation in recent versions.
+
+
+GPU out of memory during training
+---------------------------------
+
+If you encounter CUDA out-of-memory errors during RL training:
+
+- Reduce ``--num_envs`` (try halving until it fits)
+- Use ``--headless`` to skip viewport rendering
+- JAX users: set ``XLA_PYTHON_CLIENT_PREALLOCATE=false`` to prevent JAX from
+  pre-allocating all GPU memory at startup
+
+
 Understanding the error logs from crashes
 -----------------------------------------
 
