@@ -23,31 +23,31 @@ formatting, commit rules).
 ## What do you need?
 
 ### Setup & Troubleshooting
-- [Installation](setup/fresh-install.md) - Pointers to official install docs + quick start
-- [Verification](setup/verification.md) - Run existing tests to verify your install
-- [Troubleshooting](setup/troubleshooting.md) - Common errors and fixes
+- [Installation](setup/fresh-install.md) - Points to official install docs
+- [Verification](setup/verification.md) - Quick smoke tests and existing test suite
+- [Troubleshooting](setup/troubleshooting.md) - Points to official troubleshooting docs
 
 ### Architecture & Design Patterns
-- [Architecture overview](architecture/overview.md) - Multi-backend architecture, manager-based vs direct, MDP terms
-- [Backends & renderers](architecture/backends.md) - Physics backends (PhysX/Newton), renderers, visualizers
-- [Pattern comparison](architecture/patterns-comparison.md) - Side-by-side, extension points, gym registration
-- [Sensors & actuators](architecture/sensors-actuators.md) - Cameras, IMU, motors, visualizers
+- [Architecture overview](architecture/overview.md) - Factory pattern, source paths, doc pointers
+- [Backends & renderers](architecture/backends.md) - Physics backends, renderers, visualizers
+- [Pattern comparison](architecture/patterns-comparison.md) - Manager-based vs Direct
+- [Sensors & actuators](architecture/sensors-actuators.md) - Sensor/actuator doc pointers
 
 ### RL Training & Evaluation
-- [Training guide](training/guide.md) - Quick reference for all frameworks, CLI args, TensorBoard
-- [SB3 reference](training/sb3-reference.md) - Stable Baselines3 deep-dive
-- [RSL-RL & SKRL reference](training/rsl-rl-reference.md) - RSL-RL and SKRL frameworks
-- [RL-Games reference](training/rl-games-reference.md) - RL-Games deep-dive
-- [Hyperparameter tuning](training/hyperparameters.md) - Cross-framework tuning, TensorBoard metric names
+- [Training guide](training/guide.md) - CLI quick reference for all frameworks
+- [SB3 reference](training/sb3-reference.md) - Stable Baselines3
+- [RSL-RL & SKRL reference](training/rsl-rl-reference.md) - RSL-RL and SKRL
+- [RL-Games reference](training/rl-games-reference.md) - RL-Games
+- [Hyperparameters](training/hyperparameters.md) - Config file locations, TensorBoard
 
 ### Building Custom Environments
 - [Environment builder](environments/builder.md) - Config structure, reward design rules
 - [Code templates](environments/templates.md) - Pointers to real examples in the codebase
 
 ### Tutorials
-- [CartPole (Hello World)](tutorials/cartpole.md) - Train your first policy end-to-end
-- [Code walkthrough](tutorials/code-walkthrough.md) - Understand the CartPole implementation
-- [Experiments](tutorials/experiments.md) - Modify rewards, add cameras, domain randomization
+- [CartPole](tutorials/cartpole.md) - Quick start and key source files
+- [Code walkthrough](tutorials/code-walkthrough.md) - Source file pointers
+- [Experiments](tutorials/experiments.md) - Common modifications and customization
 
 ### Key Documentation Paths
 | Topic | Path |
@@ -57,3 +57,4 @@ formatting, commit rules).
 | Migration to Lab 3.0 | `docs/source/migration/migrating_to_isaaclab_3-0.rst` |
 | API reference | `docs/source/api/` |
 | Reference architecture | `docs/source/refs/reference_architecture/` |
+| Troubleshooting | `docs/source/refs/troubleshooting.rst` |
